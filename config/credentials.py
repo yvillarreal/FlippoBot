@@ -9,8 +9,8 @@ global URL
 
 ADDRESS = '0.0.0.0'
 PORT = int(os.environ.get('PORT', '8443'))
-BOT_TOKEN = SECRET_TOKEN
-BOT_USER_NAME = USER_NAME
-CHAT = CHAT_ID
+BOT_TOKEN = os.environ.get('SECRET_TOKEN')
+BOT_USER_NAME = os.environ.get('USER_NAME')
+CHAT = os.environ.get('CHAT_ID')
 BOT = telegram.Bot(token=BOT_TOKEN)
-URL = URL
+URL = os.environ.get('URL')
