@@ -101,7 +101,7 @@ def received_information(update: Update, context: CallbackContext) -> int:
     del context.user_data['choice']
 
     update.message.reply_text(
-        "¡Excelente! Para que lo sepas, esto es lo que ya me dijiste:"
+        "¡Excelente! Para que lo sepas, esto es lo que ya me has dicho:"
         f" {facts_to_str(context.user_data)}"
         "Puedes contarme más o cambiar tu opinión sobre algo.",
         reply_markup=markup,
@@ -112,7 +112,7 @@ def received_information(update: Update, context: CallbackContext) -> int:
 
 def show_data(update: Update, context: CallbackContext) -> None:
     update.message.reply_text(
-        f"Esto es lo que ya me dijiste: {facts_to_str(context.user_data)}"
+        f"Esto es lo que ya me has dicho: {facts_to_str(context.user_data)}"
     )
 
 
@@ -121,7 +121,7 @@ def done(update: Update, context: CallbackContext) -> int:
         del context.user_data['choice']
 
     update.message.reply_text(
-        "Aprendí esto sobre ti:" f"{facts_to_str(context.user_data)} ¡Hasta la proxima!",
+        "Aprendí esto sobre ti:" f"{facts_to_str(context.user_data)} ¡Hasta la proxima! Espero verte pronto",
         reply_markup=ReplyKeyboardRemove(),
     )
     return ConversationHandler.END
