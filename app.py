@@ -142,7 +142,7 @@ def main() -> None:
             CHOOSING: [
                 MessageHandler(
                     # Filters.regex('^(Edad|Color Favorito|Number of siblings)$'), regular_choice
-                    Filters.regex('^(Edad|Color Favorito|Precio del BitCoin)$'), regular_choice
+                    Filters.regex('^(Edad|Color Favorito|Precio del BitCoin)$'), regular_choice,
                 ),
                 MessageHandler(Filters.regex('^¿Algo más?..$'), custom_choice),
             ],
